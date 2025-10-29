@@ -1,0 +1,144 @@
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 108vh;
+  background: #f9fafb;
+}
+
+
+.dashboard-body {
+  display: flex;
+  flex: 1;
+}
+
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* Title */
+.welcome {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+
+/* ✅ Always show 2 cards per row */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* exactly 2 equal-width columns */
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+
+/* Card Base */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+
+.card.active {
+  border: 2px solid #b45309;
+  transform: scale(1.03);
+}
+
+
+/* Icon */
+.icon {
+  margin-bottom: 10px;
+}
+
+
+/* Headings & Text */
+.card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+
+.count {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+}
+
+
+/* Color Accents */
+.card.police .icon { color: #0284c7; }
+.card.vehicle .icon { color: #22c55e; }
+.card.vr .icon { color: #f59e0b; }
+.card.jio .icon { color: #9333ea; }
+
+
+/* Details Section */
+.details-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.details-section h3 {
+  font-size: 20px;
+  color: #b45309;
+  margin-bottom: 10px;
+}
+
+
+.details-section p {
+  color: #444;
+  line-height: 1.6;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Responsive: 1 card per row for small screens */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .main-content {
+    padding: 20px;
+  }
+  .welcome {
+    font-size: 22px;
+  }
+}
+

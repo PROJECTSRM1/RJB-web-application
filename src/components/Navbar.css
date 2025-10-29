@@ -1,3 +1,4 @@
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -6,27 +7,65 @@
   padding: 14px 44px;
 }
 
+.navbar-group {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 36px;         
+  width: auto;
+  margin-right: 16px;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 8px;    
+}
+
 .navbar-title {
   font-size: 1.44rem;
   font-weight: 700;
   color: #ffd96c;
   font-family: 'Tiro Devanagari Sanskrit', serif;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 9px #fff3e499, 0 2px 0 #7e4914;
+  margin: 0;
 }
 
 .navbar-links {
   display: flex;
   gap: 28px;
   list-style: none;
-  padding: 0; margin: 0;
+  padding: 0; 
+  margin: 0;
 }
+
 .navbar-links a {
   color: #ffd96c;
   font-size: 1.05rem;
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 1px;
+  transition: color 0.2s;
 }
+
 .navbar-links a:hover {
   color: #8a3400;
   text-decoration: underline;
+}
+.navbar-links li {
+  display: inline-block;
+  color: #ffd96c;                     
+  font-size: 1.05rem;
+  font-weight: 600;
+  /* letter-spacing: 1px; */
+  text-decoration: none;                
+  cursor: pointer;                     
+  /* padding: 0 12px; */
+  transition: color 0.2s;
+  border-radius: 4px;
+}
+.navbar-links li:hover {
+  color: #8a3400;
+  text-decoration: underline;           
+  
 }

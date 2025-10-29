@@ -1,0 +1,108 @@
+.auth-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://triptovaranasi.in/wp-content/uploads/2024/01/Ayodhya-Tour-Package.png');
+  background-size: cover;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* Glassy black card */
+.auth-box {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 40px 32px;
+  border-radius: 16px;
+  color: #fff;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Headings */
+.auth-box h3,
+.auth-box h4 {
+  color: #FFD700;
+  margin: 0 0 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+
+/* Inputs */
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+
+.auth-box input:focus {
+  border-bottom: 1px solid #FFD700;
+}
+
+
+/* Placeholder color */
+.auth-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Button */
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: 1px solid #FFD700;
+  background: transparent;
+  color: #FFD700;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.auth-box button:hover {
+  background: #FFD700;
+  color: #000;
+}
+
+
+/* Links */
+.extra-links {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+
+.extra-links a {
+  color: #FFD700;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+.extra-links a:hover {
+  color: #fff;
+}
+
+
+/* Make responsive for small screens */
+@media (max-width: 480px) {
+  .auth-box {
+    width: 90%;
+    padding: 28px 20px;
+  }
+}
+

@@ -6,7 +6,9 @@ const images = [
   "https://th.bing.com/th/id/OIP._Jmckbp9tHnfU1aVihMzeQHaEK?w=272&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3",
   "https://www.hindustantimes.com/ht-img/img/2024/01/22/1600x900/First_look_of_Ram_lalla_1705911497228_1705911499475.jpg",
   "https://th.bing.com/th/id/OIP.dZRSNhJz8n5jJPPyoWNDXAHaFj?w=243&h=182&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3",
-  "https://th.bing.com/th/id/OIP.1Kj3CpakDG21rDWIO5BccQHaEK?w=267&h=184&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
+  "https://th.bing.com/th/id/OIP.KtycrG8gxisXDMSx7jacSAHaEK?w=283&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3",
+  "https://www.livemint.com/lm-img/img/2024/01/22/1600x900/Ayodhya_1705888504312_1705925080947.jpg",
+  "https://images.news18.com/ibnlive/uploads/2024/01/ayodhya-ram-lalla-2024-01-503365f689a880e23c6ab59e7fc10848-scaled.jpg?impolicy=website&width=0&height=0"
 ];
 
 export default function GallerySection() {

@@ -1,0 +1,47 @@
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(180deg, #fffaf3 0%, #fde68a 100%);
+    border-right: 2px solid #fcd34d;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column
+}
+
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: #b45309;
+    text-align: center;
+    margin-bottom: 24px
+}
+
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+
+.menu li {
+    padding: 12px 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: #5a3e1b
+}
+
+
+.menu li:hover {
+    background: rgba(217, 119, 6, 0.08);
+    color: #b45309
+}
+
+
+.logout {
+    color: #b91c1c;
+    font-weight: 600
+}

@@ -1,0 +1,128 @@
+
+.support-content {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+
+/* Page Header */
+.header-section {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+
+.header-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #af3828;
+  margin-bottom: 6px;
+}
+
+
+.header-section p {
+  color: #555;
+  font-size: 14px;
+}
+
+
+/* Table Wrapper */
+.table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+
+/* Table Styles */
+.tickets-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+
+.tickets-table th {
+  background: linear-gradient(135deg, #b45309, #af3828);
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+
+.tickets-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  color: #333;
+}
+
+
+.tickets-table tr:hover {
+  background: rgba(254, 240, 138, 0.25);
+  transition: 0.3s;
+}
+
+
+/* Status Badges */
+.status-active,
+.status-closed {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.status-active {
+  background: #22c55e;
+  color: #fff;
+}
+
+
+.status-closed {
+  background: #dc2626;
+  color: #fff;
+}
+
+
+/* Delete Button */
+.delete-btn {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+
+.delete-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #f87171, #b91c1c);
+}
+
+
+/* No Results */
+.no-results {
+  text-align: center;
+  color: #666;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
