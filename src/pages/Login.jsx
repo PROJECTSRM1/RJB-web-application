@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/auth.css';
@@ -9,24 +8,17 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  function handleLogin(e) {
     e.preventDefault();
-    fetch(`https://localhost:7171/api/signup/${encodeURIComponent(email)}`)
-      .then(res => {
-        if(res.status === 404) return null;
-        return res.json();
-      })
-      .then(user => {
-        console.log("User from backend:", user);
-        if(user && user.email === email && user.password === password){
-          localStorage.setItem('email', email);
-          navigate('/dashboard');
-        } else {
-          alert('Invalid credentials');
-        }
-      })
-      .catch(() => alert('Network/server error'));
-  };
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const user = users.find(u => u.email === email && u.password === password);
+    if (user) {
+      localStorage.setItem('email', email);
+      navigate('/dashboard');
+    } else {
+      alert('Invalid credentials');
+    }
+  }
 
   return (
     <div className="auth-page login-page">

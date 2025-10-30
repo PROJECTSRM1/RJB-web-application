@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/auth.css';
@@ -12,26 +11,15 @@ const Signup = () => {
 
   function handleSubmit(e){
     e.preventDefault();
-    fetch('https://localhost:7171/api/signup', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 
-        name: firstname + " " + lastname, // combine for .NET API
-        email, 
-        password 
-      })
-    })
-    .then(res => res.json())
-    .then(data => {
-      if(data.message === "Email already exists" || data.message === "All fields are required") {
-        alert(data.message);
-      } else if (data.message === "User registered successfully") {
-        alert('Account created successfully. Please login.');
-        navigate('/login');
-      } else {
-        alert('Unknown error');
-      }
-    });
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    if (users.find(u => u.email === email)) {
+      alert("Email already exists");
+      return;
+    }
+    users.push({ name: firstname + " " + lastname, email, password });
+    localStorage.setItem('users', JSON.stringify(users));
+    alert('Account created successfully. Please login.');
+    navigate('/login');
   }
 
   return (

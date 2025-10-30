@@ -17,18 +17,16 @@ const RecoverPassword = () => {
     e.preventDefault();
     setError('');
     setSuccess('');
-    fetch('http://localhost:4000/api/users/recover', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form)
-    }).then(res => res.json())
-      .then(data => {
-        if (data.error) setError(data.error);
-        else {
-          setSuccess(data.message);
-          setTimeout(() => navigate('/login'), 1800);
-        }
-      });
+    let users = JSON.parse(localStorage.getItem('users') || '[]');
+    const idx = users.findIndex(u => u.email === form.email);
+    if (idx === -1) {
+      setError('Email not found');
+      return;
+    }
+    users[idx].password = form.password;
+    localStorage.setItem('users', JSON.stringify(users));
+    setSuccess('Password updated successfully!');
+    setTimeout(() => navigate('/login'), 1800);
   }
 
   return (
