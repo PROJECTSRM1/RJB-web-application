@@ -1,4 +1,4 @@
-// DonationSection.jsx
+
 import React from "react";
 import "./DonationSection.css";
 export default function DonationSection() {

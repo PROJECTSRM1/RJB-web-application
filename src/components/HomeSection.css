@@ -115,3 +115,75 @@
   background: #146029;
   color: #ffe38b;
 }
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 65vh;
+    padding: 10vw 0 6vw 0;
+    background-position: 50% 10%;
+  }
+  .hero-content {
+    padding: 18px 4vw 26px 4vw;
+    max-width: 99vw;
+  }
+  .hero-logo {
+    height: 70px;
+    max-width: 85vw;
+    margin-bottom: 3px;
+  }
+  .hero-title {
+    font-size: 1.16rem;
+    margin-bottom: 8px;
+  }
+  .hero-title-sanskrit {
+    font-size: 0.98rem;
+    margin-bottom: 13px;
+  }
+  .hero-desc {
+    font-size: 0.92rem;
+    margin-bottom: 16px;
+  }
+  .contribute-btn {
+    font-size: 0.97rem;
+    padding: 11px 14vw;
+    margin: 10px 0 20px 0;
+    min-width: none;
+    width: 95vw;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-content {
+    padding: 6vw 2vw 6vw 2vw;
+  }
+  .hero-title { font-size: 0.91rem; }
+  .hero-title-sanskrit { font-size: 0.7rem; }
+  .hero-desc { font-size: 0.80rem; }
+  .contribute-btn { font-size: 0.85rem; padding: 10px 6vw; }
+}
+
+
+@media (max-width: 700px) {
+  .contribute-btn {
+    font-size: 1rem;
+    padding: 13px 11vw;
+    width: 90vw;
+    min-width: 0;
+    display: block;
+    margin: 12px auto 20px auto;
+    text-align: center;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 420px) {
+  .contribute-btn {
+    font-size: 0.9rem;
+    padding: 10px 5vw;
+    width: 96vw;
+    margin: 9px auto 16px auto;
+  }
+}

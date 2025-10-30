@@ -22,10 +22,7 @@ export default function DarshanTimingsSection() {
             <li><span>Shringar Aarti :</span> 06:30 AM</li>
             <li><span>Shayan Aarti :</span> 09:30 PM</li>
           </ul>
-          {/* <div className="darshan-notification">
-            <strong>Important Notification:</strong> The above timings will be shown on your booking receipt from <strong>23 October, 2025</strong>.<br />
-            <strong>IMPORTANT REMINDER:</strong> Please carefully follow the instructions provided on your pass to ensure a smooth experience and avoid any inconvenience.
-          </div> */}
+         
         </div>
       </div>
     </section>

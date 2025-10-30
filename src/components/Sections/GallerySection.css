@@ -27,24 +27,6 @@
   border: 2.5px solid #ffd596;
 }
 
-/* .gallery-images {
-  display: flex;
-  gap: 32px;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.gallery-img {
-  width: 340px;
-  height: 230px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 8px 32px #c57d0e22;
-  border: 2.5px solid #ffd596;
-  margin-bottom: 32px;
-} */
-
 
 /* This ensures three images per row even on wide screens */
 @media (min-width: 1200px) {
@@ -54,7 +36,7 @@
     justify-content: flex-start;
   }
   .gallery-img {
-    flex: 1 0 30%;      /* Roughly 3 per row */
+    flex: 1 0 30%;      
     max-width: 390px;
   }
 }

@@ -106,3 +106,53 @@
   }
 }
 
+/* === EXTRA MOBILE MEDIA QUERIES === */
+@media (max-width: 420px) {
+  .navbar, .navbar1, .sidebar {
+    padding: 8px 8vw;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .navbar-logo, .navbar1-logo {
+    height: 28px;
+  }
+
+  .navbar-title, .navbar1-title {
+    font-size: 1.1rem;
+  }
+
+  .header-section h2,
+  .gallery-title,
+  .events-title {
+    font-size: 1.18rem;
+  }
+
+  .welcome {
+    font-size: 17px;
+    margin-bottom: 18px;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .auth-box {
+    padding: 13px 4vw;
+    width: 98vw;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    padding: 0 4vw 8px 4vw;
+  }
+
+  .gallery-images {
+    grid-template-columns: 1fr;
+    gap: 20px 0;
+  }
+  .gallery-img {
+    height: 170px;
+    max-width: 97vw;
+  }
+}

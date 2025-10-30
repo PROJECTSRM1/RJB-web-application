@@ -74,7 +74,7 @@
   font-weight: bold;
 }
 
-/* Notification card: centered and elegant */
+
 .darshan-notification {
   margin: 38px auto 0 auto;
   padding: 15px 36px 13px 36px;
@@ -96,7 +96,7 @@
   font-weight: 700;
 }
 
-/* Responsive */
+
 @media (max-width: 600px) {
   .darshan-section { min-height: 500px; }
   .darshan-content { padding: 18px 4vw; }

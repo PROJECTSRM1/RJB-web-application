@@ -1,15 +1,20 @@
+
+
 import React from "react";
 import "./Navbar1.css";
+
 
 const Navbar1= () => {
   return (
     <nav className="navbar1">
 
 
+
       <div className="navbar1-left">
         
         <h2 className="navbar1-title">Rama Janma Bhumi</h2>
       </div>
+
 
 
     
@@ -22,6 +27,7 @@ const Navbar1= () => {
       </div>
 
 
+
     
       <div className="navbar1-right">
         <select className="location-select">
@@ -32,7 +38,9 @@ const Navbar1= () => {
         </select>
 
 
+
         <div className="notification-icon">🔔</div>
+
 
 
         <div className="user-info">
@@ -46,6 +54,7 @@ const Navbar1= () => {
     </nav>
   );
 };
+
 
 
 export default Navbar1;

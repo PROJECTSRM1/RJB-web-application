@@ -48,28 +48,29 @@ const SupportTickets = () => {
                 </tr>
               </thead>
               <tbody>
-                {tickets.map(t => (
-                  <tr key={t.id}>
-                    <td>{t.id}</td>
-                    <td>{t.customerId}</td>
-                    <td>{t.orderId}</td>
-                    <td>{t.description}</td>
-                    <td>{t.createdDate}</td>
-                    <td>
-                      {t.isActive ? (
-                        <span className="status-active">Active</span>
-                      ) : (
-                        <span className="status-closed">Closed</span>
-                      )}
-                    </td>
-                    <td>
-                      <button className="delete-btn" onClick={() => handleDelete(t.id)}>
-                        🗑 Delete
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
+  {tickets.map(t => (
+    <tr key={t.id}>
+      <td data-label="ID">{t.id}</td>
+      <td data-label="Customer">{t.customerId}</td>
+      <td data-label="Order ID">{t.orderId}</td>
+      <td data-label="Description">{t.description}</td>
+      <td data-label="Date">{t.createdDate}</td>
+      <td data-label="Status">
+        {t.isActive ? (
+          <span className="status-active">Active</span>
+        ) : (
+          <span className="status-closed">Closed</span>
+        )}
+      </td>
+      <td data-label="Action">
+        <button className="delete-btn" onClick={() => handleDelete(t.id)}>
+          🗑 Delete
+        </button>
+      </td>
+    </tr>
+  ))}
+</tbody>
+
             </table>
             {tickets.length === 0 && <p className="no-results">No tickets available.</p>}
           </div>

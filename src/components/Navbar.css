@@ -69,3 +69,179 @@
   text-decoration: underline;           
   
 }
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 10vw;
+    align-items: flex-start;
+  }
+  .navbar-group {
+    margin-bottom: 14px;
+  }
+  .navbar-links {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+  }
+  .navbar-title-main, .navbar-title-sub {
+    font-size: 1.03rem;
+    letter-spacing: 1px;
+  }
+  .navbar-logo {
+    height: 30px;
+  }
+}
+
+
+.navbar-burger {
+  display: none;
+  background: #ffd88b;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 2px solid #fcd34d;
+  padding: 8px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin-left: 12px;
+  box-shadow: 0 2px 8px #dfa51629;
+  transition: background 0.2s;
+}
+.navbar-burger span {
+  display: block;
+  width: 22px;
+  height: 3px;
+  margin: 2.5px 0;
+  background: #b45309;
+  border-radius: 2px;
+  transition: all 0.18s;
+}
+
+
+.navbar-mobile-menu {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 13px 5vw 10px 5vw;
+    position: relative;
+    z-index: 101;
+  }
+  .navbar-links {
+    display: none;
+  }
+  .navbar-burger {
+    display: flex;
+    margin: 7px 0 8px 0;
+  }
+  .navbar-title {
+    font-size: 1.08rem;
+    margin-bottom: 7px;
+  }
+  .navbar-logo {
+    height: 28px;
+  }
+  .navbar-mobile-menu {
+    display: block;
+    position: fixed;
+    left: -100vw;
+    top: 0;
+    width: 80vw;
+    max-width: 310px;
+    height: 100vh;
+    z-index: 999;
+    background: linear-gradient(180deg, #fffbe2 0%, #fcd67d 100%);
+    box-shadow: 0 0 40px #a1791131;
+    padding: 25px 0 0 0;
+    transition: left 0.23s cubic-bezier(.87,.13,.27,.89);
+    border-right: 2px solid #ffe398;
+  }
+  .navbar-mobile-menu.open {
+    left: 0;
+  }
+  .navbar-mobile-menu ul {
+    list-style-type: none;
+    padding: 0 0 0 25px;
+    margin: 0;
+  }
+  .navbar-mobile-menu li {
+    padding: 17px 8px;
+    margin-bottom: 5px;
+    font-size: 1.08rem;
+    color: #bc7707;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    background: transparent;
+    transition: background 0.14s;
+  }
+  .navbar-mobile-menu li:hover {
+    background: #fff2b2;
+    color: #a66500;
+  }
+
+  .navbar-mobile-overlay {
+    display: block;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(66,44,1,0.23);
+    z-index: 998;
+  }
+}
+
+.navbar-title {
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+  color: #ffd96c;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 9px #fff3e499, 0 2px 0 #7e4914;
+  line-height: 1.1;
+}
+
+.navbar-title-main {
+  font-weight: 800;
+  font-size: 1.18em;
+  letter-spacing: 2px;
+  display: block;
+}
+.navbar-title-sub {
+  font-weight: 700;
+  font-size: 1em;
+  letter-spacing: 2px;
+  margin-top: 2px;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .navbar-title {
+    font-size: 1.1rem;
+    text-align: left;
+    margin-bottom: 3px;
+    line-height: 1.18;
+  }
+  .navbar-title-main {
+    font-size: 1.15em;
+  }
+  .navbar-title-sub {
+    font-size: 1em;
+    margin-top: 1px;
+    letter-spacing: 1.7px;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    word-break: keep-all;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-title { font-size: 0.89rem; }
+  .navbar-title-main { font-size: 1em; }
+  .navbar-title-sub { font-size: 0.98em; }
+}

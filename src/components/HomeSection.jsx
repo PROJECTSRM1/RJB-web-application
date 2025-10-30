@@ -22,11 +22,11 @@ export default function HeroSection() {
           
           <h1 className="hero-title">Shri Ram Janmbhoomi Teerth Kshetra</h1>
           <div className="hero-title-sanskrit">रामो विग्रहवान् धर्मः</div>
-          {/* Contribute description */}
+          
           <div className="hero-desc">
             You may voluntarily contribute here for Shri Ram Janmbhoomi Teerth Kshetra Trust
           </div>
-          {/* Contribute button */}
+         
           <a href="#donate" className="contribute-btn">CLICK TO CONTRIBUTE</a>
           
         </div>

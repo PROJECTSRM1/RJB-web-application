@@ -1,4 +1,4 @@
-// GallerySection.jsx
+
 import React from "react";
 import "./GallerySection.css";
 
@@ -20,13 +20,7 @@ export default function GallerySection() {
           <img key={i} src={img} alt="Ayodhya Mandir" className="gallery-img" />
         ))}
       </div>
-    {/* <section id="live" class="section container live">
-    <h3>Live Darshan</h3>
-    <div class="video-container" id="videoPreview">
-      <img src="https://img.youtube.com/vi/BOjJGALm2kQ/maxresdefault.jpg" alt="Live Darshan Preview" />
-      <div class="play-button"></div>
-    </div>
-  </section> */}
+    
   <section id="live" class="section container live">
   <h3 className="live-header">Live Darshan</h3>
   <div class="video-container" id="livedarshan">
