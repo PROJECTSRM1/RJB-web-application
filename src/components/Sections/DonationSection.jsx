@@ -8,7 +8,7 @@ export default function DonationSection() {
       <p className="donation-desc">
         Help us maintain the temple and serve devotees. Your generosity brings blessings to you and your family.
       </p>
-      <a href="#" className="don-button">Donate Now</a>
+      {/* <a href="#" className="don-button">Donate Now</a> */}
     </section>
   );
 }

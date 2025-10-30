@@ -14,11 +14,11 @@ const AyodhyaFooter = () => (
         <p>Phone: +91 98765 -----</p>
       </div>
       <div className="footer-section">
-        <h4>Follow</h4>
+        {/* <h4>Follow</h4>
         <p>
-          <a href="#" className="footer-link">Instagram</a> •
-          <a href="#" className="footer-link">Facebook</a>
-        </p>
+          <a href="/contact">Contact Us</a>
+
+        </p> */}
       </div>
     </div>
     <hr className="footer-divider" />
