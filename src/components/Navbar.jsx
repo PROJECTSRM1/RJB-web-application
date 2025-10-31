@@ -7,10 +7,12 @@ export default function Navbar() {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Close mobile menu on navigation
+  // --- Navigation handler ---
   const handleNav = (path) => {
-    navigate(path);
+    // close menu before navigating to avoid overlay block
     setMenuOpen(false);
+    // navigate after a tiny delay (lets React close menu first)
+    setTimeout(() => navigate(path), 100);
   };
 
   return (
@@ -20,15 +22,18 @@ export default function Navbar() {
           src="/images/ayodhya-logo-removebg-preview.png"
           alt="Ayodhya Logo"
           className="navbar-logo"
+          onClick={() => handleNav("/")}
         />
-<h1 className="navbar-title">
-  <span className="navbar-title-main">AYODHYA DHAM |</span><br />
-  <span className="navbar-title-sub">राम लला</span>
-</h1>
+        <h1 className="navbar-title">
+          <span className="navbar-title-main">AYODHYA DHAM |</span>
+          <br />
+          <span className="navbar-title-sub">राम लला</span>
+        </h1>
       </div>
-      {/* Hamburger for mobile */}
+
+      {/* Burger for mobile */}
       <button
-        className="navbar-burger"
+        className={`navbar-burger ${menuOpen ? "open" : ""}`}
         aria-label="Menu"
         onClick={() => setMenuOpen(!menuOpen)}
       >
@@ -36,7 +41,8 @@ export default function Navbar() {
         <span />
         <span />
       </button>
-      
+
+      {/* Desktop links */}
       <ul className="navbar-links">
         <li onClick={() => handleNav("/")}>Home</li>
         <li onClick={() => handleNav("/livedarshan")}>Live Darshan</li>
@@ -46,7 +52,8 @@ export default function Navbar() {
         <li onClick={() => handleNav("/contact")}>Contact</li>
         <li onClick={() => handleNav("/login")}>Login</li>
       </ul>
-      
+
+      {/* Mobile menu */}
       <div className={`navbar-mobile-menu${menuOpen ? " open" : ""}`}>
         <ul>
           <li onClick={() => handleNav("/")}>Home</li>
@@ -58,8 +65,13 @@ export default function Navbar() {
           <li onClick={() => handleNav("/login")}>Login</li>
         </ul>
       </div>
+
+      {/* Overlay */}
       {menuOpen && (
-        <div className="navbar-mobile-overlay" onClick={() => setMenuOpen(false)} />
+        <div
+          className="navbar-mobile-overlay"
+          onClick={() => setMenuOpen(false)}
+        />
       )}
     </nav>
   );

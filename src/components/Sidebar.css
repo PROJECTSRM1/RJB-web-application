@@ -1,176 +1,188 @@
 
-.sidebar-drawer {
-  display: flex;
-  flex-direction: column;
-  width: 260px;
-  min-height: 100vh;
+.sidebar {
+  width: 250px;
+  height: 100vh;
   background: linear-gradient(180deg, #fffaf3 0%, #fde68a 100%);
   border-right: 2px solid #fcd34d;
-  padding: 32px 0 0 0;
+  padding: 20px;
   box-sizing: border-box;
-  z-index: 101;
-  transition: left 0.22s cubic-bezier(.87,.13,.27,.89);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  z-index: 10;
 }
-.sidebar-drawer.drawer.mobile-only,
-.sidebar-drawer.mobile-only {
-  display: none;
-}
+
 .menu {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .menu li {
-  padding: 18px 12px;
+  padding: 12px 10px;
   border-radius: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   cursor: pointer;
   color: #5a3e1b;
-  font-size: 1.15rem;
-  font-family: 'Merriweather', serif;
-  background: transparent;
-  font-weight: 400;
-  transition: background 0.16s, color 0.16s;
-  border: none;
-  outline: none;
+  font-weight: 500;
+  transition: background 0.2s;
 }
+
 .menu li:hover {
   background: rgba(217, 119, 6, 0.08);
   color: #b45309;
 }
-.menu .logout {
+
+.logout {
   color: #b91c1c;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .burger {
+  background: transparent;
+  border: 2px solid #fcd34d;
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 1100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.burger .vertical-line {
+  width: 4px;
+  height: 12px;
+  background-color: #b45309;
+  border-radius: 3px;
+}
+
+/* Hide burger when drawer is open */
+.burger.hidden {
+  display: none !important;
+}
+
+
+/* ---------- VISIBILITY CONTROL ---------- */
+.mobile-only {
   display: none;
 }
 
-/* ----------- MOBILE ONLY ----------- */
-@media (max-width:700px) {
-  .sidebar-drawer.drawer.mobile-only.open {
-    display: flex !important;
+.desktop-only {
+  display: flex;
+}
+
+/* ---------- MOBILE DRAWER ---------- */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: flex;
+  }
+  .desktop-only {
+    display: none;
+  }
+
+  .drawer {
     position: fixed;
-    left: 0;
     top: 0;
-    width: 100vw;
+    left: -270px;
+    width: 250px;
     height: 100vh;
-    min-width: 0;
-    max-width: unset;
-    padding: 0;
-    z-index: 2200;
-    box-shadow: 0 0 37px #dab65633;
-    border: none;
-    background: linear-gradient(180deg, #fdf6e3 0%, #fef7cb 100%);
-    flex-direction: column;
-    transition: left 0.22s cubic-bezier(.87,.13,.27,.89);
+    background: linear-gradient(180deg, #fffaf3 0%, #fde68a 100%);
+    border-right: 2px solid #fcd34d;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1050;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
   }
+
+  .drawer.open {
+    left: 0;
+  }
+
   .drawer-overlay {
-    display: block;
     position: fixed;
-    left: 0; top: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(60,40,10,0.13);
-    z-index: 2190;
-  }
-  .menu {
-    padding-top: 65px; /* enough space for your burger button or logo, or reduce for flush menu */
-  }
-  .burger {
-    display: flex !important;
-    position: fixed;
-    top: 16px;
-    left: 18px;
-    z-index: 2300;
-    /* burger styles... */
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1040;
   }
 }
 
+/* ---------- LOGOUT CONFIRM MODAL ---------- */
 .modal-overlay {
   position: fixed;
-  left: 0; top: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(44, 27, 0, 0.23);
-  z-index: 5000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
   display: flex;
-  align-items: center;
   justify-content: center;
-  backdrop-filter: blur(1px);
+  align-items: center;
+  z-index: 1200;
 }
 
 .modal {
-  background: #fffaf3;
+  background: #fff8e6;
+  border: 2px solid #fcd34d;
   border-radius: 16px;
-  box-shadow: 0 8px 36px #ddb44c23, 0 2px 12px #dab74b99;
-  padding: 32px 22px 22px 22px;
-  max-width: 330px;
-  width: 82vw;
+  padding: 24px 28px;
+  width: 320px;
   text-align: center;
-  font-family: "Merriweather", serif;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
 }
 
 .modal-title {
-  font-size: 1.26rem;
+  font-size: 18px;
+  font-weight: 700;
   color: #b45309;
-  font-weight: bold;
-  margin-bottom: 7px;
-  letter-spacing: .2px;
+  margin-bottom: 8px;
 }
 
 .modal-desc {
-  color: #765005;
-  font-size: 1.1rem;
-  margin-bottom: 18px;
-  opacity: 0.95;
+  font-size: 15px;
+  color: #5a3e1b;
+  margin-bottom: 20px;
 }
 
 .modal-actions {
   display: flex;
-  justify-content: center;
-  gap: 18px;
-  margin-top: 10px;
+  justify-content: space-around;
 }
 
 .modal-btn {
-  padding: 11px 24px;
+  padding: 8px 18px;
   border-radius: 8px;
-  font-size: 1.03rem;
   font-weight: 600;
   border: none;
   cursor: pointer;
-  box-shadow: 0 3px 12px #e0bf801c;
-  margin-top: 3px;
-  transition: background 0.15s, color 0.15s, box-shadow 0.18s;
-}
-.modal-cancel {
-  background: #ffedc2;
-  color: #986404;
-  border: 1.5px solid #ffe499;
-}
-.modal-cancel:hover {
-  background: #ffdb81;
-  color: #a16500;
-}
-.modal-confirm {
-  background: linear-gradient(94deg, #b43f09 65%, #c81b1b 100%);
-  color: #fff;
-  border: none;
-}
-.modal-confirm:hover {
-  background: linear-gradient(94deg, #a94f12 30%, #e34337 90%);
-  color: #fffde8;
+  transition: 0.2s;
 }
 
-@media(max-width:700px) {
-  .modal {
-    max-width: 97vw;
-    padding: 18px 6px 14px 6px;
-    font-size: 0.99rem;
-  }
-  .modal-title { font-size: 1.08rem; }
-  .modal-desc { font-size: 0.96rem; }
-  .modal-btn { font-size: 0.94rem; padding: 9px 13px;}
+.modal-cancel {
+  background: #fff;
+  border: 1px solid #fcd34d;
+  color: #b45309;
+}
+
+.modal-cancel:hover {
+  background: #fef3c7;
+}
+
+.modal-confirm {
+  background: #dc2626;
+  color: white;
+}
+
+.modal-confirm:hover {
+  background: #b91c1c;
 }

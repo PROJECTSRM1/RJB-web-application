@@ -1,8 +1,6 @@
 .gallery-section {
-  /* background: rgba(213, 201, 171, 0.7); */
-    /* background: linear-gradient(90deg,#fff7e2 0%,#ffeecd 99%); */
+ 
       background: linear-gradient(90deg,#ffeaa9 0,#fff9e9 99%);
-/* background: rgb(213, 201, 171); */
   text-align: center; padding: 33px 0;
 }
 .gallery-title {

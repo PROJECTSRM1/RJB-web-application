@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -18,10 +17,11 @@ import SupportTickets from './pages/SupportTickets';
 
 import './App.css';
 
+
 function isAuthenticated() {
-  // Check for a valid logged-in email
-  return !!localStorage.getItem('email');
+  return !!localStorage.getItem("email");
 }
+
 
 function MainSections() {
   return (
@@ -41,13 +41,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Auth pages */}
+       
         <Route path="/" element={<MainSections />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/recover" element={<RecoverPassword />} />
 
-        {/* Protected pages that require login */}
+       
         <Route
           path="/dashboard"
           element={isAuthenticated() ? <Dashboard /> : <Navigate to="/login" />}

@@ -7,11 +7,13 @@
   padding: 14px 44px;
 }
 
-.navbar-group {
-  display: flex;
-  align-items: center;
-}
 
+.navbar-group {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
 .navbar-logo {
   height: 36px;         
   width: auto;
@@ -124,24 +126,32 @@
   display: none;
 }
 
-@media (max-width: 700px) {
+
+  @media (max-width: 700px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     padding: 13px 5vw 10px 5vw;
     position: relative;
     z-index: 101;
+    /* display: flex; */
   }
   .navbar-links {
     display: none;
   }
   .navbar-burger {
     display: flex;
-    margin: 7px 0 8px 0;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    margin:  0;
   }
   .navbar-title {
     font-size: 1.08rem;
-    margin-bottom: 7px;
+    text-align: left;
+    margin-bottom: 0;
   }
   .navbar-logo {
     height: 28px;
@@ -244,4 +254,58 @@
   .navbar-title { font-size: 0.89rem; }
   .navbar-title-main { font-size: 1em; }
   .navbar-title-sub { font-size: 0.98em; }
+}
+/* --- FIX MOBILE BURGER POSITION --- */
+@media (max-width: 700px) {
+  .navbar-burger {
+    position: fixed !important;
+    top: 16px;
+    right: 16px;
+    z-index: 1200 !important;
+    background: #ffd88b;
+    border: 2px solid #fcd34d;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  /* make sure navbar itself doesn't cover it */
+  .navbar {
+    position: relative;
+    z-index: 100;
+  }
+
+  /* overlay fix (so burger stays above it) */
+  .navbar-mobile-overlay {
+    z-index: 1100;
+  }
+}
+.navbar-mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+}
+
+.navbar-mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 240px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  z-index: 100; /* ABOVE overlay */
+}
+
+.navbar-mobile-menu.open {
+  right: 0;
+}
+
+.navbar-burger {
+  z-index: 101; /* on top */
+  position: relative;
 }
