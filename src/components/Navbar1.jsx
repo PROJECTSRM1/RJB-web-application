@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import "./Navbar1.css";
 
@@ -7,7 +6,6 @@ import "./Navbar1.css";
 const Navbar1= () => {
   return (
     <nav className="navbar1">
-
 
 
       <div className="navbar1-left">
