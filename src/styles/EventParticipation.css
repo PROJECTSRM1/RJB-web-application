@@ -1,0 +1,40 @@
+.event-container {
+background: linear-gradient(135deg, #fffaf3 0%, #fde68a 100%);
+border: 2px solid #fcd34d;
+border-radius: 12px;
+padding: 30px;
+max-width: 650px;
+margin: 40px auto;
+box-shadow: 0 4px 15px #fcd34d80;
+text-align: center;
+font-family: "Poppins", sans-serif;
+}
+
+
+.event-title {
+font-size: 26px;
+font-weight: 700;
+color: #6b4000;
+margin-bottom: 16px;
+}
+
+
+.event-message {
+font-size: 17px;
+font-weight: 500;
+color: #78350f;
+}
+
+
+/* 📱 Mobile View */
+@media (max-width: 600px) {
+.event-container {
+padding: 20px;
+margin: 20px;
+}
+
+
+.event-title {
+font-size: 20px;
+}
+}
