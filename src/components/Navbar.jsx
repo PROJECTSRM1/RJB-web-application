@@ -9,11 +9,27 @@ export default function Navbar() {
 
   // --- Navigation handler ---
   const handleNav = (path) => {
-    // close menu before navigating to avoid overlay block
     setMenuOpen(false);
-    // navigate after a tiny delay (lets React close menu first)
+
+    const sectionIds = ["livedarshan", "donation", "gallery", "events", "contact"];
+
+    // Remove leading slash (in case you pass "/donation")
+    const cleanPath = path.replace("/", "");
+
+    if (sectionIds.includes(cleanPath)) {
+      setTimeout(() => {
+        const section = document.getElementById(cleanPath);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+      return; 
+    }
+
+
     setTimeout(() => navigate(path), 100);
   };
+
 
   return (
     <nav className="navbar">
@@ -45,7 +61,7 @@ export default function Navbar() {
       {/* Desktop links */}
       <ul className="navbar-links">
         <li onClick={() => handleNav("/")}>Home</li>
-        <li onClick={() => handleNav("/livedarshan")}>Live Darshan</li>
+        <li onClick={() => handleNav('livedarshan')}>Live Darshan</li>
         <li onClick={() => handleNav("/donation")}>Donate</li>
         <li onClick={() => handleNav("/gallery")}>Gallery</li>
         <li onClick={() => handleNav("/events")}>Events</li>

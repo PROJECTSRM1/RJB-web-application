@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../styles/auth.css";
@@ -17,7 +16,6 @@ const Login = () => {
     );
 
     if (user) {
-     
       localStorage.setItem("email", email);
       navigate("/dashboard", { replace: true });
     } else {
@@ -45,16 +43,27 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <span className="forget_login">
+            <Link className="forget_btn" to="/recover">
+              Forgot Password?
+            </Link>
+          </span>
           <button type="submit">LOGIN</button>
         </form>
-        <div className="extra-links">
-          <Link to="/signup">Don't have an account? Signup</Link>
-          <span>
-            <Link to="/recover">Forgot Password?</Link>
-          </span>
+        {/* <div className="extra_link_signup"> */}
+          <div className="signup_btn">
+            <p>Don't have an account?</p>
+            {/* <span></span> */}
+            {/* <span className="signup_bt" to="/signup"> Signup</span> */}
+            <Link className="signup_bt" to="/signup">
+  Signup
+</Link>
+
+          </div>
+         
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

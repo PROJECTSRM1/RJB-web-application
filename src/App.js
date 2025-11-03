@@ -15,6 +15,15 @@ import Dashboard from './pages/Dashboard';
 import Settings from './pages/Settings';
 import SupportTickets from './pages/SupportTickets';
 
+import SecondLayout from "./layouts/SecondLayout";
+import ContributePage from "./pages/ContibutePage";
+import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
+import PrivacyPage from './pages/PrivacyPage';
+import FeedbackPage from './pages/FeedbackPage';
+import EventParticipation from './pages/EventParticipation';
+import TransactionHistory from './pages/TransactionHistory';  
+
 import './App.css';
 
 
@@ -43,7 +52,17 @@ function App() {
       <Routes>
        
         <Route path="/" element={<MainSections />} />
-        <Route path="/login" element={<Login />} />
+        <Route element={<SecondLayout />}>
+        <Route path='/events' element={<EventParticipation />} />
+        <Route path='/transactions' element={<TransactionHistory />} />
+  <Route path="/contribute" element={<ContributePage />} />
+  <Route path="/contact" element={<ContactPage />} />
+  <Route path="/about" element={<AboutPage />} />
+  <Route path="/privacy" element={<PrivacyPage />} />
+  <Route path="/feedback" element={<FeedbackPage />} />
+</Route>
+
+         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/recover" element={<RecoverPassword />} />
 
@@ -61,6 +80,7 @@ function App() {
           element={isAuthenticated() ? <SupportTickets /> : <Navigate to="/login" />}
         />
       </Routes>
+
     </Router>
   );
 }

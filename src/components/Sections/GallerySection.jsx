@@ -21,7 +21,7 @@ export default function GallerySection() {
         ))}
       </div>
     
-  <section id="live" class="section container live">
+  <section id="livedarshan" class="section container live">
   <h3 className="live-header">Live Darshan</h3>
   <div class="video-container" id="livedarshan">
     <iframe

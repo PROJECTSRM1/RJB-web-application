@@ -1,0 +1,84 @@
+.transaction-container {
+  background: linear-gradient(135deg, #fffaf3 0%, #fde68a 100%);
+  border: 2px solid #fcd34d;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 650px;
+  margin: 40px auto;
+  box-shadow: 0 4px 15px #fcd34d80;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.transaction-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #6b4000;
+  margin-bottom: 20px;
+}
+
+
+.transaction-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+
+select {
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  outline: none;
+  background: #fff8e1;
+  cursor: pointer;
+}
+
+
+button {
+  background: #f59e0b;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+button:hover {
+  background: #d97706;
+}
+
+
+.search-result {
+  margin-top: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #78350f;
+}
+
+
+/* 📱 Mobile View */
+@media (max-width: 600px) {
+  .transaction-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+
+  .transaction-title {
+    font-size: 20px;
+  }
+
+
+  select,
+  button {
+    width: 100%;
+  }
+}
+

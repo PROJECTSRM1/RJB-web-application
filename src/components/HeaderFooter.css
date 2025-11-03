@@ -1,0 +1,140 @@
+/* ===== Header Styling ===== */
+.contribute-header {
+  background-color: #ff7b00;
+  border-bottom: 3px solid #fff;
+  text-align: center;
+  padding: 8px 0;
+}
+
+/* Single combined logo image */
+.contribute-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contribute-logo {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+}
+
+/* ===== Navigation Bar ===== */
+.contribute-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  background-color: #ff7b00;
+  /* border-top: 2px solid #fff; */
+}
+
+.contribute-nav li {
+  /* border-right: 1px solid white; */
+}
+
+.contribute-nav li:last-child {
+  /* border-right: none; */
+}
+
+.contribute-nav a {
+  display: block;
+  /* padding: 12px 1px; */
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  /* transition: background 0.2s ease; */
+}
+
+.contribute-nav a.active,
+.contribute-nav a:hover {
+  /* background-color: #e06e00; */
+}
+
+/* ===== Footer Styling ===== */
+.contribute-footer {
+  background-color: #ff7b00;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 4px;
+  border-top: 2px solid #fff;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 180px;
+  flex-wrap: wrap;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.footer-top a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-top a:hover {
+  text-decoration: underline;
+}
+
+.contribute-footer hr {
+  width: 90%;
+  border: none;
+  border-top: 1px solid #fff;
+  margin: 10px auto;
+}
+
+.contribute-footer p {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* 🌐 Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 12px;
+    font-size: 1rem;
+  }
+
+  .contribute-footer {
+    padding: 16px 0;
+  }
+
+  .contribute-footer p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .contribute-footer hr {
+    width: 85%;
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .contribute-logo {
+    max-width: 340px;
+  }
+
+  .contribute-nav ul {
+    flex-direction: column;
+    border-top: none;
+  }
+
+  .contribute-nav li {
+    border: none;
+    border-bottom: 1px solid #fff;
+  }
+
+  .contribute-nav a {
+    padding: 10px;
+  }
+}
