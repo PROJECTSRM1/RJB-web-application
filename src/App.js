@@ -14,75 +14,83 @@ import RecoverPassword from './pages/RecoverPassword';
 import Dashboard from './pages/Dashboard';
 import Settings from './pages/Settings';
 import SupportTickets from './pages/SupportTickets';
-
 import SecondLayout from "./layouts/SecondLayout";
+
 import ContributePage from "./pages/ContibutePage";
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import PrivacyPage from './pages/PrivacyPage';
 import FeedbackPage from './pages/FeedbackPage';
 import EventParticipation from './pages/EventParticipation';
-import TransactionHistory from './pages/TransactionHistory';  
+import TransactionHistory from './pages/TransactionHistory';
+import Aarti from "./pages/Aarti";
+import SughamDarshan from "./pages/SughamDarshan";
+
+
+import DonationReceiptAlert from "./pages/DonationReceiptAlert";
+import DonationReceiptCorrections from "./pages/DonationReceiptCorrections";
+
+
 
 import './App.css';
 
-
 function isAuthenticated() {
-  return !!localStorage.getItem("email");
+return !!localStorage.getItem("email");
 }
 
-
 function MainSections() {
-  return (
-    <>
-      <Navbar />
-      <HomeSection />
-      <DonationSection />
-      <DarshanTimingsSection />
-      <EventsSection />
-      <GallerySection />
-      <AyodhyaFooter />
-    </>
-  );
+return (
+<> <Navbar /> <HomeSection /> <DonationSection /> <DarshanTimingsSection /> <EventsSection /> <GallerySection /> <AyodhyaFooter />
+</>
+);
 }
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-       
-        <Route path="/" element={<MainSections />} />
-        <Route element={<SecondLayout />}>
-        <Route path='/events' element={<EventParticipation />} />
-        <Route path='/transactions' element={<TransactionHistory />} />
-  <Route path="/contribute" element={<ContributePage />} />
-  <Route path="/contact" element={<ContactPage />} />
-  <Route path="/about" element={<AboutPage />} />
-  <Route path="/privacy" element={<PrivacyPage />} />
-  <Route path="/feedback" element={<FeedbackPage />} />
-</Route>
+return ( <Router> <Routes>
+<Route path="/" element={<MainSections />} />
 
-         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/recover" element={<RecoverPassword />} />
+```
+    {/* SecondLayout routes */}
+    <Route element={<SecondLayout />}>
+      <Route path="/events" element={<EventParticipation />} />
+      <Route path="/transactions" element={<TransactionHistory />} />
+      <Route path="/contribute" element={<ContributePage />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/privacy" element={<PrivacyPage />} />
+      <Route path="/feedback" element={<FeedbackPage />} />
+         <Route path="/aarti" element={<Aarti />} />
+          <Route path="/darshan" element={<SughamDarshan />} />
+    </Route>
 
-       
-        <Route
-          path="/dashboard"
-          element={isAuthenticated() ? <Dashboard /> : <Navigate to="/login" />}
-        />
-        <Route
-          path="/settings"
-          element={isAuthenticated() ? <Settings /> : <Navigate to="/login" />}
-        />
-        <Route
-          path="/support"
-          element={isAuthenticated() ? <SupportTickets /> : <Navigate to="/login" />}
-        />
-      </Routes>
+    {/* Donation main tab route */}
+    
+    <Route path="/donation-receipt" element={<DonationReceiptAlert />} />
+    <Route path="/donation-corrections" element={<DonationReceiptCorrections />} />
 
-    </Router>
-  );
+
+
+    {/* Auth routes */}
+    <Route path="/login" element={<Login />} />
+    <Route path="/signup" element={<Signup />} />
+    <Route path="/recover" element={<RecoverPassword />} />
+
+    {/* Protected routes */}
+    <Route
+      path="/dashboard"
+      element={isAuthenticated() ? <Dashboard /> : <Navigate to="/dashboard" />}
+    />
+    <Route
+      path="/settings"
+      element={isAuthenticated() ? <Settings /> : <Navigate to="/login" />}
+    />
+    <Route
+      path="/support"
+      element={isAuthenticated() ? <SupportTickets /> : <Navigate to="/login" />}
+    />
+  </Routes>
+</Router>
+);
 }
 
 export default App;
