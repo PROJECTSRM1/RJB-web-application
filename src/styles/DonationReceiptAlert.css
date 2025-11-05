@@ -1,0 +1,170 @@
+/* ===== Base Styles ===== */
+.alert-page {
+  background: linear-gradient(180deg, #fff2cc 0%, #ffeb99 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 100px 20px 40px;
+  box-sizing: border-box;
+}
+
+.alert-box {
+  width: 60%;
+  max-width: 700px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===== Header ===== */
+.alert-header {
+  background-color: #f57c00;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.alert-icon {
+  margin-right: 10px;
+  font-size: 26px;
+}
+
+/* ===== Content ===== */
+.alert-content {
+  padding: 25px 30px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* ===== Buttons ===== */
+.alert-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 15px 30px;
+  gap: 20px;
+}
+
+.no-btn,
+.yes-btn {
+  padding: 10px 26px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.no-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.no-btn:hover {
+  background-color: #d6d6d6;
+}
+
+.yes-btn {
+  background-color: #f57c00;
+  color: white;
+}
+
+.yes-btn:hover {
+  background-color: #ef6c00;
+}
+
+/* ===== Responsive Design ===== */
+
+/* 💻 Medium Screens (≤1024px) */
+@media (max-width: 1024px) {
+  .alert-box {
+    width: 75%;
+  }
+
+  .alert-header {
+    font-size: 20px;
+    padding: 10px 16px;
+  }
+
+  .alert-content {
+    font-size: 15px;
+    padding: 20px;
+  }
+}
+
+/* 📱 Tablets (≤768px) */
+@media (max-width: 768px) {
+  .alert-page {
+    padding-top: 80px;
+  }
+
+  .alert-box {
+    width: 90%;
+  }
+
+  .alert-header {
+    font-size: 18px;
+  }
+
+  .alert-icon {
+    font-size: 22px;
+  }
+
+  .alert-content {
+    padding: 18px 15px;
+    font-size: 14.5px;
+  }
+
+  .no-btn,
+  .yes-btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
+/* 📲 Mobile (≤480px) */
+@media (max-width: 480px) {
+  .alert-page {
+    padding-top: 60px;
+  }
+
+  .alert-box {
+    width: 100%;
+    margin: 0 10px;
+  }
+
+  .alert-header {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .alert-icon {
+    font-size: 20px;
+  }
+
+  .alert-content {
+    padding: 15px 10px;
+    font-size: 13.5px;
+  }
+
+  .alert-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .no-btn,
+  .yes-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
