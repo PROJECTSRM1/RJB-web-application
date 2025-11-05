@@ -27,7 +27,7 @@ export default function GallerySection() {
     <iframe
       width="100%"
       height="410"
-      src="https://www.youtube.com/embed/fKJFzC25MXo?autoplay=1"
+     src="https://www.youtube.com/embed/jEya0lPXPDo?si=vEDRpT_zylM5hrcE"
       title="राम लला के दर्शन | अयोध्या लाइव"
       frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
