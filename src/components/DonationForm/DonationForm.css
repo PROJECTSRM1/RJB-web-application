@@ -1,0 +1,285 @@
+/* ===== Base Styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #fff2cc 0%, #ffeb99 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.donation-page {
+  padding: 30px;
+}
+
+/* ===== Headings ===== */
+.section-title {
+  color: #ff6600;
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* ===== Donor Type Section ===== */
+.donor-type-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.donor-label input {
+  margin-right: 5px;
+}
+
+/* ===== Form Styles ===== */
+.donation-form {
+  background-color: transparent;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.orange-line {
+  border: none;
+  height: 2px;
+  background: #ff6600;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.col {
+  color: #ff6600;
+}
+
+/* ===== Buttons ===== */
+.button-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.reset-btn,
+.submit-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff6600;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.reset-btn {
+  background-color: #ccc;
+}
+
+.reset-btn:hover {
+  background-color: #bbb;
+}
+
+.submit-btn:hover {
+  background-color: #e65c00;
+}
+
+/* ===== Bank & Assistance Section ===== */
+.bank-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* margin-top: 30px; */
+
+}
+.lab{
+  margin-top: -40px;
+}
+
+
+.assist-form {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.bank-details{
+  flex: 1;
+  height: 310px;
+  padding: 20px;
+  width: 100px;
+}
+
+.bank-details {
+  margin-top: 20px;
+  background: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.bank-logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.sumit {
+  margin-top: 10px;
+}
+.error
+{color: red;}
+
+.assist-form {
+  background: #fff6f0;
+  height: 310px;
+}
+
+.assist-form h3 {
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+.info-text {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.done {
+  font-weight: bold;
+}
+
+/* ===== Note Section ===== */
+.note-section {
+  padding: 30px 50px;
+  margin-top: 50px;
+  color: #222;
+  margin-left: -50px;
+}
+
+.note-section h3 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.note-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.note-section li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* ====== Responsive Design ====== */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .donation-page {
+    padding: 20px;
+  }
+
+  .form-row {
+    gap: 15px;
+  }
+
+  .bank-section {
+    gap: 20px;
+  }
+
+  .bank-details,
+  .assist-form {
+    padding: 15px;
+  }
+}
+
+/* Medium Devices (≤768px) */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .button-row {
+    justify-content: center;
+  }
+
+  .bank-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bank-details,
+  .assist-form {
+    width: 100%;
+  }
+
+  .note-section {
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+/* Small Devices (≤480px) */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .donor-type-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .reset-btn,
+  .submit-btn {
+    width: 100%;
+  }
+
+  .bank-logo {
+    width: 120px;
+  }
+
+  .note-section {
+    padding: 15px;
+    font-size: 14px;
+    margin: 20px;
+  }
+   .bank-details,
+  .assist-form {
+    width: 90%;
+  }
+}

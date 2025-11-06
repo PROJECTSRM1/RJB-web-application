@@ -25,6 +25,8 @@ import EventParticipation from './pages/EventParticipation';
 import TransactionHistory from './pages/TransactionHistory';
 import Aarti from "./pages/Aarti";
 import SughamDarshan from "./pages/SughamDarshan";
+import DonationPage from "./pages/DonationPage";
+
 
 
 import DonationReceiptAlert from "./pages/DonationReceiptAlert";
@@ -59,11 +61,13 @@ return ( <Router> <Routes>
       <Route path="/about" element={<AboutPage />} />
       <Route path="/privacy" element={<PrivacyPage />} />
       <Route path="/feedback" element={<FeedbackPage />} />
-         <Route path="/aarti" element={<Aarti />} />
-          <Route path="/darshan" element={<SughamDarshan />} />
+      <Route path="/aarti" element={<Aarti />} />
+      <Route path="/darshan" element={<SughamDarshan />} />
     </Route>
 
     {/* Donation main tab route */}
+    <Route path="/donate" element={<DonationPage />} />
+
     
     <Route path="/donation-receipt" element={<DonationReceiptAlert />} />
     <Route path="/donation-corrections" element={<DonationReceiptCorrections />} />
